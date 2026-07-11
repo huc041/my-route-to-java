@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         //String s = "J@va the be$t!123"; // →"t@eb eht av$J!123";
-        //String s = "Java the be$t!1f3"; // fteb eht av$a!1J3
-        String s = "";
+        String s = "C0de_@ Rev!ew99"; // fteb eht av$a!1J3
+        //String s = "Int3l#J Cor@2026x";
         if (s.isEmpty() || s.length() <=1) {
             System.out.println("Строка слишком короткая или пустая");
         }
