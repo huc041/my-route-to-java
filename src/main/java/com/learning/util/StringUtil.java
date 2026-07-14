@@ -1,7 +1,7 @@
-package com.learning.task1;
+package com.learning.util;
 
 public class StringUtil {
-    public static String reverseString(String s) {
+    public static String reverseLetters(String s) {
         int n = s.length();
         char c = s.charAt(0);
         char[] chars = s.toCharArray();

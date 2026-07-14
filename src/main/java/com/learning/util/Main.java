@@ -1,4 +1,4 @@
-package com.learning.task1;
+package com.learning.util;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Main {
             return;
         }
         else {
-                String result = StringUtil.reverseString(s);
+                String result = StringUtil.reverseLetters(s);
                 System.out.println(result);  // "avaJ"
         }
     }
