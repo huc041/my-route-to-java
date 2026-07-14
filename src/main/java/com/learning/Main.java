@@ -1,4 +1,6 @@
-package com.learning.util;
+package com.learning;
+
+import com.learning.util.StringUtil;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Main {
             return;
         }
         else {
-                String result = StringUtil.reverseLetters(s);
+                String result = StringUtil.git (s);
                 System.out.println(result);  // "avaJ"
         }
     }
