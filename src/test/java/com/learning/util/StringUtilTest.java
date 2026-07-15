@@ -6,59 +6,52 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringUtilTest {
 
-    StringUtil strUtil = new StringUtil();
+    private final StringUtil strUtil = new StringUtil();
+
     @Test
     void shouldReverseLettersKeepingSymbols() {
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("J@va the be$t!123");
         assertEquals("t@eb eht av$J!123", result);
     }
 
     @Test
     void returnsEmptyForEmptyInput(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("");
         assertEquals("", result);
     }
 
     @Test
     void reversesOnlyOneLetter(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("a");
         assertEquals("a", result);
     }
 
     @Test
     void KeepNonLettersInPlace(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("123 !@#");
         assertEquals("123 !@#", result);
     }
 
     @Test
     void reversesOnlyLetters(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("abcd");
         assertEquals("dcba", result);
     }
 
     @Test
     void KeepNonLettersInEdgesAndInMiddle(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("!ab4cd?");
         assertEquals("!dc4ba?", result);
     }
 
     @Test
     void reversesLettersWithCorrectRegister(){
-        strUtil = new StringUtil();
         String result = strUtil.reverseLetters("aBcD");
         assertEquals("DcBa", result);
     }
 
     @Test
     void inputNULLString(){
-        strUtil = new StringUtil();
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> strUtil.reverseLetters(null)
