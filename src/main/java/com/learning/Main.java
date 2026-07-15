@@ -14,7 +14,7 @@ public class Main {
             return;
         }
         else {
-                String result = StringUtil.git (s);
+                String result = StringUtil.reverseLetters (s);
                 System.out.println(result);  // "avaJ"
         }
     }
