@@ -3,10 +3,12 @@ package com.learning.util;
 public class StringUtil {
     public static String reverseLetters(String s) {
 
-        if (s == null)
+        if (s == null) {
             throw new IllegalArgumentException("Строка не инициализирована (null)");
-        if (s.isEmpty() || s.length() <1)
+        }
+        if (s.isEmpty() || s.length() <1) {
             return "";
+        }
 
         int n = s.length();
         char c = s.charAt(0);
