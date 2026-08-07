@@ -1,4 +1,4 @@
-package com.learning.util;
+package com.learning.lesson2.util;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

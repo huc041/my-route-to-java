@@ -1,0 +1,32 @@
+package com.learning.lesson3.objects;
+import java.time.LocalDateTime;
+
+public class Order {
+
+    public Order(String companyMane, int cementAmount, LocalDateTime orderDate) {
+        this.companyMane = companyMane;
+        this.cementAmount = cementAmount;
+        this.orderDate = orderDate;
+    }
+
+    public String getCompanyMane() {
+        return companyMane;
+    }
+
+    public int getCementAmount() {
+        return cementAmount;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    private String companyMane;
+    private int cementAmount;
+    private LocalDateTime orderDate;
+}
+
+
+
+
+

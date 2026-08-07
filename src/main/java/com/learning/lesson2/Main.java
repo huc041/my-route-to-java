@@ -1,6 +1,6 @@
-package com.learning;
+package com.learning.lesson2;
 
-import com.learning.util.StringUtil;
+import com.learning.lesson2.util.StringUtil;
 
 public class Main {
     public static void main(String[] args) {
