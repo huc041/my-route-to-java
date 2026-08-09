@@ -16,7 +16,7 @@ public class Main {
 
         OrderSourceInterface orderSourceInterface = OrderSourceFactory.create(pathFile2);
         List<Order> orders = orderSourceInterface.read();
-        for(Order order : orders){
+        for (Order order : orders) {
             System.out.println(order.getCompanyMane());
         }
 
