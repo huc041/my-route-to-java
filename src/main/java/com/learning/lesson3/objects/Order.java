@@ -21,6 +21,10 @@ public class Order {
         return orderDate;
     }
 
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
+    }
+
     private String companyMane;
     private int cementAmount;
     private LocalDateTime orderDate;
