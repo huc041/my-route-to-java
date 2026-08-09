@@ -1,23 +1,30 @@
 package com.learning.lesson3.objects;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class OrderSourceFactory {
-    static OrderSource create(Path path) {
-        if (path == null){
-            throw new IllegalArgumentException("path must not be NULL");
+    public static OrderSource create(Path path) {
+        if (path == null) {
+            throw new IllegalArgumentException("path is NULL");
         }
-        String pathString = path.getFileName().toString().toLowerCase();
-        //System.out.println("file path is: " + pathString);
-        if (pathString.endsWith(".txt")){
-            return new TxtOrderSource();
+        if (!Files.isRegularFile(path)) {
+            throw new IllegalArgumentException("file does not exist");
         }
-        else if(!pathString.contains(".")) {
-            return new NoExtensionOrderSource();
+        String name = path.getFileName().toString();
+        if (name.toLowerCase().endsWith(".txt")) {
+            return new TxtOrderSource(path);
         }
-        else{
-            throw new IllegalArgumentException("Неподдерживаемый тип файла");
+        else if(!name.contains(".")) {
+            return new NoExtensionOrderSource(path);
         }
-
+        else {
+            throw new IllegalArgumentException("unsupported file format: " + name);
+        }
     }
 }
